@@ -30,7 +30,7 @@ const server = http.createServer((req, res) => {
     handleReadFile(200, "./marchandics.html");
   } 
     else if (req.url === "/packags.html") {
-    handleReadFile(200, "./Packags.html");
+    handleReadFile(200, "./packags.html");
   } 
 
   else if (req.url === "/contact.html") {
