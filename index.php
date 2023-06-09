@@ -299,7 +299,7 @@ video {
     </button>
     <a href="#HOME" class="w3-bar-item w3-button w3-padding-large">HOME</a>
     <a  href="./about.html"  class="w3-bar-item w3-button w3-padding-large w3-hide-small">ABOUT</a>
-    <a href="./packegs.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">PACKAGES</a>
+    <a href="./packags.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">PACKAGES</a>
     <a href="./contact.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">CONTACT</a>
      
     <div class="w3-dropdown-hover w3-hide-small">
