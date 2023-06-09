@@ -12,31 +12,22 @@
   }
 ?>
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<title>Home</title>
-	<link rel="stylesheet" type="text/css" href="style.css">
-	<title>home page</title>
+<title>home</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" type="text/css" href="style.css" />
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<link rel="stylesheet" type="text/css" href="style.css" />
-<link
-  rel="stylesheet"
-  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
-  integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
-  crossorigin="anonymous"
-  referrerpolicy="no-referrer"
-/>
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
 body {font-family: "Lato", sans-serif}
 .mySlides {display: none}
+</style>
+<style>
 *{box-sizing: border-box;}
+
+
 
 .menu{
     background-color: rgb(230, 236, 237);
@@ -99,7 +90,202 @@ body {font-family: "Lato", sans-serif}
  }
 
 </style>
-   
+<style media="screen">
+  .form-question {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 0 3rem;
+    min-height: 3rem;
+  }
+  .form-question__title {
+    color: #342357;
+    font-size: 1.5rem;
+    padding: 1rem;
+  }
+  .input-container {
+    border-bottom: solid 2px #333333;
+  }
+  .input-container input {
+    border: none;
+    box-sizing: border-box;
+    outline: 0;
+    padding: .75rem;
+    width: 100%;
+  }
+  </style>
+   <style>
+.slidecontainer {
+  width: 100%;
+}
+
+.slider {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 15px;
+  border-radius: 5px;
+  background: #d3d3d3;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+
+.slider:hover {
+  opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: #04AA6D;
+  cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: #04AA6D;
+  cursor: pointer;
+}
+</style>
+<!-- token dropdown -->
+<style>
+
+body {
+  min-height: 100%;
+  margin: 0;
+}
+
+body {
+  padding: 30px;
+  background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  box-sizing: border-box;
+}
+
+.select-box {
+  position: relative;
+  display: block;
+  width: 100%;
+  margin: 0 auto;
+  font-family: "Open Sans", "Helvetica Neue", "Segoe UI", "Calibri", "Arial", sans-serif;
+  font-size: 18px;
+  color: #60666d;
+}
+@media (min-width: 768px) {
+  .select-box {
+    width: 70%;
+  }
+}
+@media (min-width: 992px) {
+  .select-box {
+    width: 50%;
+  }
+}
+@media (min-width: 1200px) {
+  .select-box {
+    width: 100%;
+  }
+}
+.select-box__current {
+  position: relative;
+  box-shadow:s 0 20px 50px -20px rgba(0, 0, 0, 0.3);
+  cursosr: pointer;
+  outline: none;
+}
+.select-box__current:focus + .select-box__list {
+  opacity: 1;
+  -webkit-animation-name: none;
+          animation-name: none;
+}
+.select-box__current:focus + .select-box__list .select-box__option {
+  cursor: pointer;
+}
+.select-box__current:focus .select-box__icon {
+  transform: translateY(-50%) rotate(180deg);
+}
+.select-box__icon {
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  transform: translateY(-50%);
+  width: 20px;
+  opacity: 0.3;
+  transition: 0.2s ease;
+}
+.select-box__value {
+  display: flex;
+}
+.select-box__input {
+  display: none;
+}
+.select-box__input:checked + .select-box__input-text {
+  display: block;
+}
+.select-box__input-text {
+  display: none;
+  width: 100%;
+  margin: 0;
+  padding: 15px;
+  background-color: #f4f4f4;
+}
+.select-box__list {
+  position: absolute;
+  width: 100%;
+  padding: 0;
+  list-style: none;
+  opacity: 0;
+  -webkit-animation-name: HideList;
+          animation-name: HideList;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-timing-function: step-start;
+          animation-timing-function: step-start;
+  box-shadow: 0 15px 30px -10px rgba(0, 0, 0, 0.1);
+}
+.select-box__option {
+  display: block;
+  padding: 15px;
+  background-color:#f4f4f4;
+}
+.select-box__option:hover, .select-box__option:focus {
+  color: #546c84;
+  background-color: #fbfbfb;
+}
+
+@-webkit-keyframes HideList {
+  from {
+    transform: scaleY(1);
+  }
+  to {
+    transform: scaleY(0);
+  }
+}
+
+@keyframes HideList {
+  from {
+    transform: scaleY(1);
+  }
+  to {
+    transform: scaleY(0);
+  }
+}
+
+</style>
+<style>
+video {
+  width: 100%;
+  height: auto;
+}
+</style>
 
 </head>
 <body>
@@ -107,18 +293,21 @@ body {font-family: "Lato", sans-serif}
 <div class="w3-top">
   <div class="w3-bar w3-black w3-card">
     <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
-     <a href="/register" class="w3-bar-item w3-button w3-padding-large w3-theme-d4"><i class="fa fa-home w3-margin-right"></i>Logout</a>
-    <a href="/index" class="w3-bar-item w3-button w3-padding-large">HOME</a>
-    <a href="./about" class="w3-bar-item w3-button w3-padding-large w3-hide-small">ABOUT</a>
-    <a href="./Packages" class="w3-bar-item w3-button w3-padding-large w3-hide-small">PACKAGES</a>
-    <a href="./book" class="w3-bar-item w3-button w3-padding-large w3-hide-small">BOOK</a>
+    <button onclick="document.getElementById('login').style.display='block'">
+
+    <a href="#login"  class="w3-bar-item w3-button w3-padding-large w3-theme-d4"><i class="fa fa-home w3-margin-right"></i>Prement</a>
+    </button>
+    <a href="#HOME" class="w3-bar-item w3-button w3-padding-large">HOME</a>
+    <a  href="./about.html"  class="w3-bar-item w3-button w3-padding-large w3-hide-small">ABOUT</a>
+    <a href="./packegs.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">PACKAGES</a>
+    <a href="./contact.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">CONTACT</a>
      
     <div class="w3-dropdown-hover w3-hide-small">
       <button class="w3-padding-large w3-button" title="More">MORE <i class="fa fa-caret-down"></i></button>     
       <div class="w3-dropdown-content w3-bar-block w3-card-4">
-        <a href="./marchandics" class="w3-bar-item w3-button">Merchandise</a>
-        <a href="./extras" class="w3-bar-item w3-button">Extras</a>
-        <a href="./media" class="w3-bar-item w3-button">Media</a>
+        <a href="marchandics.html" class="w3-bar-item w3-button">Merchandise</a>
+        <a href="extras.html" class="w3-bar-item w3-button">Extras</a>
+        <a href="media.html" class="w3-bar-item w3-button">Media</a>
       </div>
     </div>
     <a href="javascript:void(0)" class="w3-padding-large w3-hover-red w3-hide-small w3-right"><i class="fa fa-search"></i></a>
@@ -126,17 +315,122 @@ body {font-family: "Lato", sans-serif}
 </div>
 
 <!-- Navbar on small screens (remove the onclick attribute if you want the navbar to always show on top of the content when clicking on the links) -->
+
 <div id="navDemo" class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:46px">
-  <a href="/index" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">HOME</a>
-  <a href="./about" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">ABOUT</a>
-  <a href="./Packages" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">PACKEGS</a>
-  <a href="./book" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">BOOK</a>
+  <a href="#login" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">HOME</a>
+
+  <a href="index.php" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">HOME</a>
+  <a href="about.html" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">ABOUT</a>
+  <a href="packags.html"  class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">PACKEGS</a>
+  <a href="contact.html" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">CONTACT</a>
 </div>
 
 <!-- Page content -->
+
 <div class="w3-content" style="max-width:2000px;margin-top:46px">
 
-  <!-- Automatic Slideshow Images -->
+
+  <!-- login Modal -->
+
+  <div id="login" class="w3-modal">
+    <div class="w3-modal-content w3-animate-top w3-card-4">
+      <header class="w3-container w3-teal w3-center w3-padding-32"> 
+        <span onclick="document.getElementById('login').style.display='none'" 
+       class="w3-button w3-teal w3-xlarge w3-display-topright">×</span>
+        <h2 class="w3-wide"><i class="fa fa-suitcase w3-margin-right"></i>Tickets</h2>
+      </header>
+      <div class="w3-container">
+       
+      <div class="form-question">
+      <div class="form-question__title">
+        <span>Where to ?</span>
+      </div>
+      <div>
+        
+<div class="select-box">
+  <div class="select-box__current" tabindex="1">
+    <div class="select-box__value">
+      <input class="select-box__input" type="radio" id="0" value="1" name="Ben" checked="checked"/>
+      <p class="select-box__input-text">LONDON </p>
+    </div>
+    <div class="select-box__value">
+      <input class="select-box__input" type="radio" id="1" value="2" name="Ben"/>
+      <p class="select-box__input-text">JAPAN</p>
+    </div>
+    <div class="select-box__value">
+      <input class="select-box__input" type="radio" id="2" value="3" name="Ben"/>
+      <p class="select-box__input-text">CHINA</p>
+    </div>
+    <div class="select-box__value">
+      <input class="select-box__input" type="radio" id="3" value="4" name="Ben"/>
+      <p class="select-box__input-text">USA</p>
+    </div>
+    <div class="select-box__value">
+      <input class="select-box__input" type="radio" id="4" value="5" name="Ben"/>
+      <p class="select-box__input-text">Toast</p>
+    </div><img class="select-box__icon" src="http://cdn.onlinewebfonts.com/svg/img_295694.svg" alt="Arrow Icon" aria-hidden="true"/>
+  </div>
+  <ul class="select-box__list">
+    <li>
+      <label class="select-box__option" for="0" aria-hidden="aria-hidden">LONDON</label>
+    </li>
+    <li>
+      <label class="select-box__option" for="1" aria-hidden="aria-hidden">ChINA</label>
+    </li>
+    <li>
+      <label class="select-box__option" for="2" aria-hidden="aria-hidden">JAPAN</label>
+    </li>
+    <li>
+      <label class="select-box__option" for="3" aria-hidden="aria-hidden">US</label>
+    </li>
+    <li>
+      <label class="select-box__option" for="4" aria-hidden="aria-hidden">Toast</label>
+    </li>
+  </ul>
+</div>
+      </div>
+
+      <div class="input-container">
+        <input id="effective-date" type="date" name="effective-date" minlength="1" maxlength="64" placeholder=" " autocomplete="nope" required="required"></input>
+        <span class="bar"></span>
+      </div>
+    </div>
+
+
+    <div class="slidecontainer">
+     <input type="range" min="5000" max="100000" value="50" class="slider" id="myRange">
+     <p>$: <span id="demo"></span></p>
+    </div>
+      
+    <p><label><i class="fa fa-shopping-cart"></i> Tickets, $5000 per person</label></p>
+        <input class="w3-input w3-border" type="text" placeholder="How many?">
+        <p><label><i class="fa fa-user"></i> Send To</label></p>
+        <input class="w3-input w3-border" type="text" placeholder="Enter email">
+        <button class="w3-button w3-block w3-teal w3-padding-16 w3-section w3-right">PAY <i class="fa fa-check"></i></button>
+        <button class="w3-button w3-red w3-section" onclick="document.getElementById('login').style.display='none'">Close <i class="fa fa-remove"></i></button>
+        <p class="w3-right">Need <a href="#" class="w3-text-blue">help?</a></p>
+      </div>
+   
+   
+   
+   
+    </div>
+
+  
+  </div>
+  
+          
+       
+      
+      
+    </div>
+</div>
+  
+  
+  </div>
+
+
+<!-- Automatic Slideshow Images -->
   <div class="mySlides w3-display-container w3-center">
     <img src="https://images.pexels.com/photos/4172918/pexels-photo-4172918.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load" style="width:100%">
     <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small">
@@ -172,12 +466,13 @@ body {font-family: "Lato", sans-serif}
       <p><b>Thank you, Chicago - A night we won't forget.</b></p>    
     </div>
   </div>
-  
+    <!-- The TOUR about Section -->
 
 
 
-  <!-- The TOUR Section -->
-  <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:800px" id="band">
+  <!-- The TOUR about Section -->
+
+  <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:800px" id="ABOUT">
     <h2 class="w3-wide">THE TOUR</h2>
     <p class="w3-opacity"><i>We love music</i></p>
     <p class="w3-justify">We have created a fictional band website. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
@@ -200,10 +495,11 @@ body {font-family: "Lato", sans-serif}
   </div>
 
 
-  <!-- The Tour Section -->
-  <div class="w3-black" id="tour">
+  <!-- The Tour packeg Section -->
+
+  <div class="w3-black" id="PACKAGES">
     <div class="w3-container w3-content w3-padding-64" style="max-width:800px">
-      <h2 class="w3-wide w3-center">TOUR DATES</h2>
+      <h2 class="w3-wide w3-center"></h2>
       <p class="w3-opacity w3-center"><i>Remember to book your tickets!</i></p><br>
 
       <ul class="w3-ul w3-border w3-white w3-text-grey">
@@ -245,6 +541,7 @@ body {font-family: "Lato", sans-serif}
   </div>
 
   <!-- Ticket Modal -->
+
   <div id="ticketModal" class="w3-modal">
     <div class="w3-modal-content w3-animate-top w3-card-4">
       <header class="w3-container w3-teal w3-center w3-padding-32"> 
@@ -264,8 +561,9 @@ body {font-family: "Lato", sans-serif}
     </div>
   </div>
 
-  <!-- The Contact Section -->
-  <div class="w3-container w3-content w3-padding-64" style="max-width:800px" id="contact">
+  <!-- The Contact booking Section -->
+<!-- The Contact Section -->
+<div class="w3-container w3-content w3-padding-64" style="max-width:800px" id="CONTACT">
     <h2 class="w3-wide w3-center">CONTACT</h2>
     <p class="w3-opacity w3-center"><i>Fan? Drop a note!</i></p>
     <div class="w3-row w3-padding-32">
@@ -295,8 +593,11 @@ body {font-family: "Lato", sans-serif}
 </div>
 
 <!-- Image of location/map -->
-<img src="https://images.unsplash.com/photo-1447752875215-b2761acb3c5d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjczMTc0fQ&fit=crop&h=230&w=320&crop=edges" class="w3-image w3-greyscale-min" style="width:100%">
-
+<video width="400" controls>
+  <source src="https://youtu.be/pEG-jPP4x5c.mp4" type="video/mp4">
+  <source src="https://youtu.be/pEG-jPP4x5c.mp4" type="video/ogg">
+  Your browser does not support HTML5 video.
+</video>
 <!-- Footer -->
 <footer class="w3-container w3-padding-64 w3-center w3-opacity w3-light-grey w3-xlarge">
   <i class="fa fa-facebook"></i>
@@ -329,7 +630,7 @@ body {font-family: "Lato", sans-serif}
     <!-- logged in user information -->
     <?php  if (isset($_SESSION['username'])) : ?>
     	<p>Welcome <strong><?php echo $_SESSION['username']; ?></strong></p>
-    	<p> <a href="index.php?logout='1'" style="color: red;">logout</a> </p>
+    	<p> <a href="index.php?logout='1'"  style="color: red;">logout</a> </p>
     <?php endif ?>
 </div>
 
@@ -366,6 +667,23 @@ window.onclick = function(event) {
   if (event.target == modal) {
     modal.style.display = "none";
   }
+}
+
+// When the user clicks anywhere outside of the modal, close it
+var modal = document.getElementById('login');
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+</script>
+<script>
+var slider = document.getElementById("myRange");
+var output = document.getElementById("demo");
+output.innerHTML = slider.value;
+
+slider.oninput = function() {
+  output.innerHTML = this.value;
 }
 </script>
 
