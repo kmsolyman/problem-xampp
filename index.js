@@ -40,11 +40,11 @@ const server = http.createServer((req, res) => {
     handleReadFile(200, "./singout.html");
   
   }
-      else if (req.url === "/login") {
+      else if (req.url === "/login.php") {
     handleReadFile(200, "./login.php");
   
   }
-      else if (req.url === "/register") {
+      else if (req.url === "/register.php") {
     handleReadFile(200, "./register.php");
   
   }
