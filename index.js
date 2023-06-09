@@ -52,6 +52,10 @@ const server = http.createServer((req, res) => {
     handleReadFile(200, "./server.php");
   
   }
+     else if (req.url === "/product.php") {
+    handleReadFile(200, "./product.php");
+  
+  }
   else {
     handleReadFile(200, "./admin.html");
   }
