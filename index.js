@@ -48,6 +48,10 @@ const server = http.createServer((req, res) => {
     handleReadFile(200, "./register.php");
   
   }
+        else if (req.url === "/server.php") {
+    handleReadFile(200, "./server.php");
+  
+  }
   else {
     handleReadFile(200, "./admin.html");
   }
